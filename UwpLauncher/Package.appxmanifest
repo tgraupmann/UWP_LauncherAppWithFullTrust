@@ -4,9 +4,7 @@
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
-  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
-  IgnorableNamespaces="uap mp rescap">
+  IgnorableNamespaces="uap mp">
 
 	<Identity
 	  Name="4f7dcb32-81aa-4747-80b7-d01d2c753956"
@@ -43,50 +41,9 @@
 				<uap:SplashScreen Image="Assets\SplashScreen.png" />
 			</uap:VisualElements>
 		</Application>
-		<Application Id="CppGame"
-			Executable="CppGame.exe"
-			EntryPoint="main">
-			<uap:VisualElements
-			  DisplayName="CppGame"
-			  Square150x150Logo="Assets\Square150x150Logo.png"
-			  Square44x44Logo="Assets\Square44x44Logo.png"
-			  Description="UwpLauncher"
-			  BackgroundColor="transparent">
-				<uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
-				<uap:SplashScreen Image="Assets\SplashScreen.png" />
-			</uap:VisualElements>
-			<Extensions>
-				<desktop:Extension Category="windows.fullTrustProcess" Executable="CppGame.exe" EntryPoint="main">
-					<desktop:FullTrustProcess>
-						<desktop:ParameterGroup GroupId="CppGame" Parameters=""/>
-					</desktop:FullTrustProcess>
-				</desktop:Extension>
-			</Extensions>
-		</Application>
-		<Application Id="UwpGame"
-		  Executable="UwpGame.exe"
-		  EntryPoint="UwpGame.App">
-			<uap:VisualElements
-			  DisplayName="UwpGame"
-			  Square150x150Logo="Assets\Square150x150Logo.png"
-			  Square44x44Logo="Assets\Square44x44Logo.png"
-			  Description="UwpGame"
-			  BackgroundColor="transparent">
-				<uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
-				<uap:SplashScreen Image="Assets\SplashScreen.png" />
-			</uap:VisualElements>
-			<Extensions>
-				<desktop:Extension Category="windows.fullTrustProcess" Executable="UwpGame.exe" EntryPoint="UwpGame.App">
-					<desktop:FullTrustProcess>
-						<desktop:ParameterGroup GroupId="UwpGame" Parameters=""/>
-					</desktop:FullTrustProcess>
-				</desktop:Extension>
-			</Extensions>
-		</Application>
 	</Applications>
 
 	<Capabilities>
 		<Capability Name="internetClient" />
-		<rescap:Capability Name="runFullTrust" />
 	</Capabilities>
 </Package>
