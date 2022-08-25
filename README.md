@@ -16,6 +16,20 @@ Launching an application with fulltrust allows this scenario. A full trust appli
 
 This project is setup with a Windows Application Packaging Project that references two UWP projects. The UWP launcher project launches a UWP game project with full trust.
 
+## Observations
+
+* `@TODO:` The UWP sample application doesn't seem to be able to launch the UwpGame.exe with full trust.
+
+```
+Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForAppAsync("UwpGame", "UwpGame");
+```
+
+* The C++ console application CppGame.exe launches successfully with full trust.
+
+```
+Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForAppAsync("CppGame", "CppGame");
+```
+
 ## Screenshots
 
 **The UWP launcher app**
