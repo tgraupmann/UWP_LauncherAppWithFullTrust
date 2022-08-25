@@ -46,12 +46,25 @@ namespace UwpLauncher
             {
                 if (Windows.Foundation.Metadata.ApiInformation.IsApiContractPresent("Windows.ApplicationModel.FullTrustAppContract", 1, 0))
                 {
-                    await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () =>
+
+                    Windows.Foundation.IAsyncAction action = Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForAppAsync("UwpGame", "UwpGame");
+                    while (action.Status == Windows.Foundation.AsyncStatus.Started)
                     {
-                        await Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForAppAsync("UwpGame", "UwpGame");
-                        await Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForAppAsync("CppGame", "CppGame");
-                    });
-                    await SetText("Launch Success!");
+                        await Task.Delay(delay);
+                    }
+                    await SetText(string.Format("UWP Game Status: {0}", action.Status));
+                    await Task.Delay(2000);
+
+                    action = Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForAppAsync("CppGame", "CppGame");
+                    while (action.Status == Windows.Foundation.AsyncStatus.Started)
+                    {
+                        await Task.Delay(delay);
+                    }
+                    await SetText(string.Format("C++ Game Status: {0}", action.Status));
+                    await Task.Delay(2000);
+
+                    await SetText("Launch Complete!");
+                    await Task.Delay(2000);
                     Application.Current.Exit();
                 }
                 else
