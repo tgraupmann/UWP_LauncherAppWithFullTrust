@@ -25,3 +25,7 @@ This project is setup with a Windows Application Packaging Project that referenc
 **The UWP game app**
 
 ![image_2](images/image_2.png)
+
+**The C++ game app**
+
+![image_3](images/image_3.png)

@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32819.101
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32802.440
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UwpLauncher", "UwpLauncher\UwpLauncher.csproj", "{E004DD46-3B1B-41E2-A5A1-2A540B7C6251}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UwpGame", "UwpGame\UwpGame.csproj", "{EF5134C9-CF82-44A6-85CA-B1C2030F4296}"
 EndProject
 Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "WapStoreApp", "WapStoreApp\WapStoreApp.wapproj", "{2CFB9DEB-3000-40A7-9134-55B75934F0A2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppGame", "CppGame\CppGame.vcxproj", "{B247CF88-BF61-4B3B-BF4A-1D5AB7849DAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -113,6 +115,20 @@ Global
 		{2CFB9DEB-3000-40A7-9134-55B75934F0A2}.Release|x86.ActiveCfg = Release|x86
 		{2CFB9DEB-3000-40A7-9134-55B75934F0A2}.Release|x86.Build.0 = Release|x86
 		{2CFB9DEB-3000-40A7-9134-55B75934F0A2}.Release|x86.Deploy.0 = Release|x86
+		{B247CF88-BF61-4B3B-BF4A-1D5AB7849DAB}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{B247CF88-BF61-4B3B-BF4A-1D5AB7849DAB}.Debug|ARM.ActiveCfg = Debug|Win32
+		{B247CF88-BF61-4B3B-BF4A-1D5AB7849DAB}.Debug|ARM64.ActiveCfg = Debug|Win32
+		{B247CF88-BF61-4B3B-BF4A-1D5AB7849DAB}.Debug|x64.ActiveCfg = Debug|x64
+		{B247CF88-BF61-4B3B-BF4A-1D5AB7849DAB}.Debug|x64.Build.0 = Debug|x64
+		{B247CF88-BF61-4B3B-BF4A-1D5AB7849DAB}.Debug|x86.ActiveCfg = Debug|Win32
+		{B247CF88-BF61-4B3B-BF4A-1D5AB7849DAB}.Debug|x86.Build.0 = Debug|Win32
+		{B247CF88-BF61-4B3B-BF4A-1D5AB7849DAB}.Release|Any CPU.ActiveCfg = Release|Win32
+		{B247CF88-BF61-4B3B-BF4A-1D5AB7849DAB}.Release|ARM.ActiveCfg = Release|Win32
+		{B247CF88-BF61-4B3B-BF4A-1D5AB7849DAB}.Release|ARM64.ActiveCfg = Release|Win32
+		{B247CF88-BF61-4B3B-BF4A-1D5AB7849DAB}.Release|x64.ActiveCfg = Release|x64
+		{B247CF88-BF61-4B3B-BF4A-1D5AB7849DAB}.Release|x64.Build.0 = Release|x64
+		{B247CF88-BF61-4B3B-BF4A-1D5AB7849DAB}.Release|x86.ActiveCfg = Release|Win32
+		{B247CF88-BF61-4B3B-BF4A-1D5AB7849DAB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

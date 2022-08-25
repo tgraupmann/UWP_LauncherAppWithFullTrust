@@ -43,7 +43,27 @@
 				<uap:SplashScreen Image="Assets\SplashScreen.png" />
 			</uap:VisualElements>
 		</Application>
-		<Application Id="Game"
+		<Application Id="CppGame"
+			Executable="CppGame.exe"
+			EntryPoint="main">
+			<uap:VisualElements
+			  DisplayName="CppGame"
+			  Square150x150Logo="Assets\Square150x150Logo.png"
+			  Square44x44Logo="Assets\Square44x44Logo.png"
+			  Description="UwpLauncher"
+			  BackgroundColor="transparent">
+				<uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+				<uap:SplashScreen Image="Assets\SplashScreen.png" />
+			</uap:VisualElements>
+			<Extensions>
+				<desktop:Extension Category="windows.fullTrustProcess" Executable="CppGame.exe" EntryPoint="main">
+					<desktop:FullTrustProcess>
+						<desktop:ParameterGroup GroupId="CppGame" Parameters=""/>
+					</desktop:FullTrustProcess>
+				</desktop:Extension>
+			</Extensions>
+		</Application>
+		<Application Id="UwpGame"
 		  Executable="UwpGame.exe"
 		  EntryPoint="UwpGame.App">
 			<uap:VisualElements
@@ -58,7 +78,7 @@
 			<Extensions>
 				<desktop:Extension Category="windows.fullTrustProcess" Executable="UwpGame.exe" EntryPoint="UwpGame.App">
 					<desktop:FullTrustProcess>
-						<desktop:ParameterGroup GroupId="Background" Parameters=""/>
+						<desktop:ParameterGroup GroupId="UwpGame" Parameters=""/>
 					</desktop:FullTrustProcess>
 				</desktop:Extension>
 			</Extensions>

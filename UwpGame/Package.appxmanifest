@@ -43,7 +43,7 @@
 				<uap:SplashScreen Image="Assets\SplashScreen.png" />
 			</uap:VisualElements>
 		</Application>
-		<Application Id="Game"
+		<Application Id="UwpGame"
 		  Executable="UwpGame.exe"
 		  EntryPoint="UwpGame.App">
 			<uap:VisualElements
@@ -58,7 +58,7 @@
 			<Extensions>
 				<desktop:Extension Category="windows.fullTrustProcess" Executable="UwpGame.exe">
 					<desktop:FullTrustProcess>
-						<desktop:ParameterGroup GroupId="Background" Parameters=""/>
+						<desktop:ParameterGroup GroupId="UwpGame" Parameters=""/>
 					</desktop:FullTrustProcess>
 				</desktop:Extension>
 			</Extensions>

@@ -36,13 +36,14 @@ namespace UwpLauncher
 
         private async Task LaunchProcess()
         {
+            const int delay = 500;
             for (uint i = 3; i > 0; --i)
             {
                 await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                 {
                     LblCountdown.Text = String.Format("In {0} seconds...", i);
                 });
-                await Task.Delay(1000);
+                await Task.Delay(delay);
             }
 
             await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
@@ -50,7 +51,7 @@ namespace UwpLauncher
                 LblCountdown.Text = "Now!";
             });
             
-            await Task.Delay(1000);
+            await Task.Delay(delay);
 
             try
             {
@@ -58,7 +59,8 @@ namespace UwpLauncher
                 {
                     await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () =>
                     {
-                        await Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForAppAsync("Game", "Background");
+                        await Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForAppAsync("UwpGame", "UwpGame");
+                        await Windows.ApplicationModel.FullTrustProcessLauncher.LaunchFullTrustProcessForAppAsync("CppGame", "CppGame");
                     });
                     await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
                     {
