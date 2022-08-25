@@ -30,9 +30,9 @@
 	</Resources>
 
 	<Applications>
-		<Application Id="LauncherApp"
+		<Application Id="App"
 		  Executable="$targetnametoken$.exe"
-		  EntryPoint="UwpLauncher.App">
+		  EntryPoint="$targetentrypoint$">
 			<uap:VisualElements
 			  DisplayName="UwpLauncher"
 			  Square150x150Logo="Assets\Square150x150Logo.png"

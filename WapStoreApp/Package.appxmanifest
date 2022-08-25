@@ -28,7 +28,7 @@
 	</Resources>
 
 	<Applications>
-		<Application Id="WapApp"
+		<Application Id="App"
 		  Executable="$targetnametoken$.exe"
 		  EntryPoint="$targetentrypoint$">
 			<uap:VisualElements
@@ -74,7 +74,7 @@
 				<uap:SplashScreen Image="Assets\SplashScreen.png" />
 			</uap:VisualElements>
 			<Extensions>
-				<desktop:Extension Category="windows.fullTrustProcess" Executable="UwpGame.exe">
+				<desktop:Extension Category="windows.fullTrustProcess" Executable="UwpGame.exe" EntryPoint="UwpGame.App">
 					<desktop:FullTrustProcess>
 						<desktop:ParameterGroup GroupId="UwpGame" Parameters=""/>
 					</desktop:FullTrustProcess>
